@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46FDFBCF-F5BB-4AE4-B1D5-0EF7A640A57D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Remote_Healthcare</RootNamespace>
+    <AssemblyName>Remote-Healthcare</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.6.6823.24527, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.6.6823.24527\lib\net35-client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplexNoise">
+      <HintPath>Resources\SimplexNoise.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bicycle\Bike.cs" />
+    <Compile Include="Bicycle\BikeDataPackage.cs" />
+    <Compile Include="Bicycle\BikePoller.cs" />
+    <Compile Include="Bicycle\IBikeDataListener.cs" />
+    <Compile Include="Bicycle\PhysicalBike.cs" />
+    <Compile Include="Bicycle\SimulatedBike.cs" />
+    <Compile Include="DataHandling\Commands.cs" />
+    <Compile Include="Client\DoctorClient.cs" />
+    <Compile Include="Client\Patient.cs" />
+    <Compile Include="Client\PointOfTime.cs" />
+    <Compile Include="DataHandling\Entity.cs" />
+    <Compile Include="DataHandling\SerialDataHandler.cs" />
+    <Compile Include="DataHandling\TCPDataHandler.cs" />
+    <Compile Include="DataHandling\VRHandler.cs" />
+    <Compile Include="Graphical Interfaces\AddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\AddPatient.Designer.cs">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\BicycleCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\BicycleCustomControl.designer.cs">
+      <DependentUpon>BicycleCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\ChatForm.Designer.cs">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\CircularProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\ClientGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\ClientGUI.Designer.cs">
+      <DependentUpon>ClientGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\ClientInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\ClientInput.Designer.cs">
+      <DependentUpon>ClientInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\DocGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\DocGUI.Designer.cs">
+      <DependentUpon>DocGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\DocLoginGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\DocLoginGUI.Designer.cs">
+      <DependentUpon>DocLoginGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\EndCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\EndCourse.Designer.cs">
+      <DependentUpon>EndCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\PatientData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\PatientData.Designer.cs">
+      <DependentUpon>PatientData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\SimulationManipulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\SimulationManipulator.Designer.cs">
+      <DependentUpon>SimulationManipulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\StartCourseGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\StartCourseGUI.Designer.cs">
+      <DependentUpon>StartCourseGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical Interfaces\GraphCustomControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Graphical Interfaces\GraphCustomControll.Designer.cs">
+      <DependentUpon>GraphCustomControll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JsonParse\ClientInfo.cs" />
+    <Compile Include="JsonParse\EngineUser.cs" />
+    <Compile Include="JsonParse\Jsonparser.cs" />
+    <Compile Include="Noises\Noise.cs" />
+    <Compile Include="SerialCommunication\SerialManager.cs" />
+    <Compile Include="SerialCommunication\X7Data.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialCommunication\IX7DataListener.cs" />
+    <Compile Include="TCPCommunication\IReceiver.cs" />
+    <Compile Include="TCPCommunication\package.cs" />
+    <Compile Include="TCPCommunication\TCPConnection.cs" />
+    <Compile Include="TCPCommunication\TCPReceiver.cs" />
+    <EmbeddedResource Include="Graphical Interfaces\AddPatient.resx">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\BicycleCustomControl.resx">
+      <DependentUpon>BicycleCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\ChatForm.resx">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\ClientGUI.resx">
+      <DependentUpon>ClientGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\ClientInput.resx">
+      <DependentUpon>ClientInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\DocGUI.resx">
+      <DependentUpon>DocGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\DocLoginGUI.resx">
+      <DependentUpon>DocLoginGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\EndCourse.resx">
+      <DependentUpon>EndCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\PatientData.resx">
+      <DependentUpon>PatientData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\SimulationManipulator.resx">
+      <DependentUpon>SimulationManipulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\StartCourseGUI.resx">
+      <DependentUpon>StartCourseGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphical Interfaces\GraphCustomControll.resx">
+      <DependentUpon>GraphCustomControll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\digital-7.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\BikeLogoSmaller.png" />
+    <Content Include="Properties\DoctorLogoCropped.png" />
+    <Content Include="Properties\KettlerIMG.jpg" />
+    <Content Include="Resources\BicycleButton.png" />
+    <Content Include="Resources\BicycleButtonOnHover.png" />
+    <Content Include="Resources\MedicButton.png" />
+    <Content Include="Resources\MedicButtonOnHover.png" />
+    <Content Include="Resources\SimplexNoise.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
