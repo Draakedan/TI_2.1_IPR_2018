@@ -107,6 +107,11 @@ namespace Remote_Healthcare.Client
             WriteTextMessage(CreateJsonCommand("course_stop", data));
         }
 
+        public void cacluculateVO2(int gewicht, int leeftijd, int geslacht, int HartSlagEinde)
+        {
+            return (132.853 - (0.0769 * gewicht) - (0.3877 * leeftijd) + (6.315 * geslacht) - (3.2649 * 7) - (0.1565 * HartSlagEinde));
+        }
+
         public void SetPower(string bikeID, int increment)
         {
             string data = JsonConvert.SerializeObject(new

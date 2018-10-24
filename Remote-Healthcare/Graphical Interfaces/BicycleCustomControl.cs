@@ -115,22 +115,22 @@ namespace Remote_Healthcare
             this.Enabled = false;
         }
 
-        public void StartCourse(double power, double time, double distance)
+        public void StartCourse(double age, double gender, double weight)
         {
             int fullvalue;
             int brokenvalue;
 
-            ChangeDistance((int)distance, (int) (distance - ((int) distance)) * 10);
+            ChangeDistance((int)weight, (int) (weight - ((int) weight)) * 10);
             
-            fullvalue = (int) power;
-            brokenvalue = ((int) power - fullvalue) * 100;
+            fullvalue = (int) age;
+            brokenvalue = ((int) age - fullvalue) * 100;
             ChangePower(fullvalue, brokenvalue);
 
-            fullvalue = (int) time;
-            brokenvalue = ((int) time - fullvalue) * 100;
+            fullvalue = (int) gender;
+            brokenvalue = ((int) gender - fullvalue) * 100;
             ChangeTime(fullvalue, brokenvalue);
 
-            doctorClient.StartCourse(bikeID, power.ToString(), time.ToString(), distance.ToString());
+            doctorClient.StartCourse(bikeID, age.ToString(), gender.ToString(), weight.ToString());
             
 
             bttnStart1.Enabled = false;
@@ -176,6 +176,11 @@ namespace Remote_Healthcare
         {
             if (!(circlePowerBar.Value <= 0))
                 doctorClient.SetPower(bikeID , -1);
+        }
+
+        private void circleSpeedBar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
