@@ -24,30 +24,33 @@ namespace Remote_Healthcare
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(startCourseDistanceTextfield.Text != String.Empty && startCoursePowerTextfield.Text != String.Empty && startCourseTimeTextfield.Text != String.Empty)
+            if(startCourseWeightTextfield.Text != String.Empty && startCourseAgeTextfield.Text != String.Empty && startCourseGenderTextfield.Text != String.Empty)
             {
-                string power = startCoursePowerTextfield.Text;
-                string time = startCourseTimeTextfield.Text;
-                string distance = startCourseDistanceTextfield.Text;
-                if (Convert.ToInt64(power) < 100 && Convert.ToInt64(time) < 60 && Convert.ToInt64(distance) < 10000 && Convert.ToInt64(power) > 0 && Convert.ToInt64(time) > 0 && Convert.ToInt64(distance) > 0)
+                string age = startCourseAgeTextfield.Text;
+                string gender = startCourseGenderTextfield.Text;
+                string weight = startCourseWeightTextfield.Text;
+                if (Convert.ToInt64(age) < 100 && Convert.ToInt64(gender) < 60 && Convert.ToInt64(weight) < 10000 && Convert.ToInt64(age) > 0 && Convert.ToInt64(gender) > 0 && Convert.ToInt64(weight) > 0)
                 {
-                    bicycleCustomControl.StartCourse(double.Parse(power), double.Parse(time) * 60, double.Parse(distance));
+                    if (gender == "man" || gender == "Man" || gender == "m" || gender == "M" || gender == "gay")
+                        bicycleCustomControl.StartCourse(int.Parse(age), 1, double.Parse(weight));
+                    else
+                        bicycleCustomControl.StartCourse(int.Parse(age), 0, double.Parse(weight));
                     bicycleCustomControl.Enabled = true;
                     this.Dispose();
                 }
                 else
                 {
-                    if (Convert.ToInt64(power) > 100 || Convert.ToInt64(power) < 0)
+                    if (Convert.ToInt64(age) > 100 || Convert.ToInt64(age) < 0)
                     {
-                        startCoursePowerTextfield.Text = "";
+                        startCourseAgeTextfield.Text = "";
                     }
-                    if (Convert.ToInt64(time) > 100 || Convert.ToInt64(time) < 0)
+                    if (Convert.ToInt64(gender) > 100 || Convert.ToInt64(gender) < 0)
                     {
-                        startCourseTimeTextfield.Text = "";
+                        startCourseGenderTextfield.Text = "";
                     }
-                    if (Convert.ToInt64(distance) > 100 || Convert.ToInt64(distance) < 0)
+                    if (Convert.ToInt64(weight) > 100 || Convert.ToInt64(weight) < 0)
                     {
-                        startCourseDistanceTextfield.Text = "";
+                        startCourseWeightTextfield.Text = "";
                     }
                     MessageBox.Show("Niet alle velden zijn juist ingevuld,\r\n100 is de maximale waarde");
                 }
@@ -63,6 +66,11 @@ namespace Remote_Healthcare
         {
             bicycleCustomControl.Enabled = true;
             this.Dispose();
+        }
+
+        private void StartCourseGUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

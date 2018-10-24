@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.startCoursePowerTextfield = new System.Windows.Forms.TextBox();
-            this.startCourseTimeTextfield = new System.Windows.Forms.TextBox();
-            this.startCourseDistanceTextfield = new System.Windows.Forms.TextBox();
+            this.startCourseAgeTextfield = new System.Windows.Forms.TextBox();
+            this.startCourseGenderTextfield = new System.Windows.Forms.TextBox();
+            this.startCourseWeightTextfield = new System.Windows.Forms.TextBox();
             this.confirmButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,9 +59,9 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.label2.Location = new System.Drawing.Point(33, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 16);
+            this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Startpower:";
+            this.label2.Text = "Leeftijd:";
             // 
             // label3
             // 
@@ -69,9 +69,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.label3.Location = new System.Drawing.Point(33, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Time:";
+            this.label3.Text = "geslacht:";
             // 
             // label4
             // 
@@ -79,33 +79,33 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.label4.Location = new System.Drawing.Point(33, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.Size = new System.Drawing.Size(55, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Distance:";
+            this.label4.Text = "gewicht:";
             // 
             // startCoursePowerTextfield
             // 
-            this.startCoursePowerTextfield.Font = new System.Drawing.Font("Century Gothic", 7.8F);
-            this.startCoursePowerTextfield.Location = new System.Drawing.Point(126, 54);
-            this.startCoursePowerTextfield.Name = "startCoursePowerTextfield";
-            this.startCoursePowerTextfield.Size = new System.Drawing.Size(51, 20);
-            this.startCoursePowerTextfield.TabIndex = 0;
+            this.startCourseAgeTextfield.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.startCourseAgeTextfield.Location = new System.Drawing.Point(126, 54);
+            this.startCourseAgeTextfield.Name = "startCoursePowerTextfield";
+            this.startCourseAgeTextfield.Size = new System.Drawing.Size(51, 20);
+            this.startCourseAgeTextfield.TabIndex = 0;
             // 
             // startCourseTimeTextfield
             // 
-            this.startCourseTimeTextfield.Font = new System.Drawing.Font("Century Gothic", 7.8F);
-            this.startCourseTimeTextfield.Location = new System.Drawing.Point(126, 90);
-            this.startCourseTimeTextfield.Name = "startCourseTimeTextfield";
-            this.startCourseTimeTextfield.Size = new System.Drawing.Size(51, 20);
-            this.startCourseTimeTextfield.TabIndex = 1;
+            this.startCourseGenderTextfield.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.startCourseGenderTextfield.Location = new System.Drawing.Point(126, 90);
+            this.startCourseGenderTextfield.Name = "startCourseTimeTextfield";
+            this.startCourseGenderTextfield.Size = new System.Drawing.Size(51, 20);
+            this.startCourseGenderTextfield.TabIndex = 1;
             // 
             // startCourseDistanceTextfield
             // 
-            this.startCourseDistanceTextfield.Font = new System.Drawing.Font("Century Gothic", 7.8F);
-            this.startCourseDistanceTextfield.Location = new System.Drawing.Point(126, 125);
-            this.startCourseDistanceTextfield.Name = "startCourseDistanceTextfield";
-            this.startCourseDistanceTextfield.Size = new System.Drawing.Size(51, 20);
-            this.startCourseDistanceTextfield.TabIndex = 2;
+            this.startCourseWeightTextfield.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.startCourseWeightTextfield.Location = new System.Drawing.Point(126, 125);
+            this.startCourseWeightTextfield.Name = "startCourseDistanceTextfield";
+            this.startCourseWeightTextfield.Size = new System.Drawing.Size(51, 20);
+            this.startCourseWeightTextfield.TabIndex = 2;
             // 
             // confirmButton
             // 
@@ -140,9 +140,9 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.label5.Location = new System.Drawing.Point(188, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 16);
+            this.label5.Size = new System.Drawing.Size(29, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "%";
+            this.label5.Text = "jaar";
             // 
             // label6
             // 
@@ -150,9 +150,8 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.label6.Location = new System.Drawing.Point(188, 90);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 16);
+            this.label6.Size = new System.Drawing.Size(0, 16);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Minutes";
             // 
             // label7
             // 
@@ -160,9 +159,9 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.label7.Location = new System.Drawing.Point(188, 128);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(25, 16);
+            this.label7.Size = new System.Drawing.Size(22, 16);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Km";
+            this.label7.Text = "Kg";
             // 
             // VeldenNietJuistLabel
             // 
@@ -188,9 +187,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.confirmButton);
-            this.Controls.Add(this.startCourseDistanceTextfield);
-            this.Controls.Add(this.startCourseTimeTextfield);
-            this.Controls.Add(this.startCoursePowerTextfield);
+            this.Controls.Add(this.startCourseWeightTextfield);
+            this.Controls.Add(this.startCourseGenderTextfield);
+            this.Controls.Add(this.startCourseAgeTextfield);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -201,6 +200,7 @@
             this.Name = "StartCourseGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Course options";
+            this.Load += new System.EventHandler(this.StartCourseGUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,9 +212,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox startCoursePowerTextfield;
-        private System.Windows.Forms.TextBox startCourseTimeTextfield;
-        private System.Windows.Forms.TextBox startCourseDistanceTextfield;
+        private System.Windows.Forms.TextBox startCourseAgeTextfield;
+        private System.Windows.Forms.TextBox startCourseGenderTextfield;
+        private System.Windows.Forms.TextBox startCourseWeightTextfield;
         private System.Windows.Forms.Button confirmButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label label5;

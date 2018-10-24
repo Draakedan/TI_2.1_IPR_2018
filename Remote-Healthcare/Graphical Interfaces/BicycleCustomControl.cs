@@ -122,13 +122,13 @@ namespace Remote_Healthcare
 
             ChangeDistance((int)weight, (int) (weight - ((int) weight)) * 10);
             
-            fullvalue = (int) age;
-            brokenvalue = ((int) age - fullvalue) * 100;
-            ChangePower(fullvalue, brokenvalue);
+           //fullvalue = (int) age;
+           //brokenvalue = ((int) age - fullvalue) * 100;
+            ChangePower(0, 0);
 
-            fullvalue = (int) gender;
-            brokenvalue = ((int) gender - fullvalue) * 100;
-            ChangeTime(fullvalue, brokenvalue);
+            //fullvalue = (int) gender;
+            //brokenvalue = ((int) gender - fullvalue) * 100;
+            ChangeTime(7, 00);
 
             doctorClient.StartCourse(bikeID, age.ToString(), gender.ToString(), weight.ToString());
             
